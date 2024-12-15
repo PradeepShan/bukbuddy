@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buk Buddy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper.js CSS -->
+<link
+rel="stylesheet"
+href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="/style.css"
+<!-- Swiper.js JavaScript -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<style>
+    .flip-card {
+      perspective: 1000px; /* Add 3D perspective */
+    }
+    .flip-card-inner {
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+      height: 100%; /* Ensure inner card takes full height */
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      backface-visibility: hidden; /* Hide the back face */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Ensure full height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg); /* Rotate the back face */
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-fuchsia-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Buk Buddy</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#Our-Offerings" class="hover:underline">Our Offerings</a></li>
+          <li><a href="#AI-Modules" class="hover:underline">AI-Modules</a></li>
+          <li><a href="#quiz-lab" class="hover:underline">Quiz Lab</a></li>
+          <li><a href="#ebook-device" class="hover:underline">E-Book Device</a></li>
+          <li><a href="#why-us" class="hover:underline">Why Buk Buddy?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- Hero Section -->
+<section class="bg-fuchsia-100 py-16">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+      <!-- Left Content -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold mb-4">Empowering K-12 Publishers</h2>
+        <p class="text-lg mb-6">
+            Seamlessly transform your content and lead the revolution in education. 
+            Discover innovative solutions tailored for publishers.        </p>
+        <a href="#get-started" class="bg-fuchsia-900 text-white py-3 px-6 rounded-full text-lg hover:bg-purple-700">
+          Get Started
+        </a>
+      </div>
+  
+      <!-- Right Image -->
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="https://via.placeholder.com/500" alt="Hero Section Image" class="w-full rounded-lg shadow-md">
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- offerings -->
+  <section id="Our-Offerings" class="py-24 bg-white flex items-center">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Offerings</h2>
+      <p class="text-lg text-gray-700 leading-loose">
+        At Buk Buddy, we specialize in providing white-labeled solutions for K-12 publishers. 
+        Our goal is to empower you to focus on what you do best: creating engaging, impactful learning content. 
+        We handle the technology—from digitizing content to delivering it seamlessly—while you lead the transformation in education.
+      </p>
+    </div>
+  </section>
+
+<!-- Our AI-Modules Section -->
+<section id="AI-Modules" class="py-16 bg-violet-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Updated Heading and Subheading -->
+      <h2 class="text-3xl font-bold mb-8 text-center">Transforming K-12 Publishing with Buk Buddy Modules</h2>
+      <p class="text-lg text-gray-700 mb-8 text-center">
+        Buk Buddy offers a modular approach to digital publishing, allowing you to choose the features that align with your needs. 
+        Whether you’re looking to create engaging e-books, simplify homework workflows, or streamline assessments, our platform has you covered.
+      </p>
+  
+      <!-- Swiper Slider -->
+      <div class="relative">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1: AI E-Books Module -->
+            <div class="swiper-slide flex flex-col md:flex-row items-center bg-white p-6 rounded-lg shadow-md gap-8 mb-12">
+              <!-- Text Content -->
+              <div class="md:w-1/2 pl-8">
+                <h3 class="text-2xl font-semibold mb-4">AI-Powered E-Books Module: Engage Students Like Never Before</h3>
+                <p class="text-gray-700 mb-4">
+                  Empower your digital content with our AI-powered e-books module, designed to captivate and inspire learning.
+                  Transform static content into immersive experiences with multimedia, hyperlinks, and interactive elements. 
+                  Our AI-driven tools help streamline the content creation process, allowing for efficient and engaging e-books.
+                </p>
+                <ul class="list-disc list-outside text-gray-700 pl-4">
+                  <li>Interactive E-Books Creation: Add multimedia, hyperlinks, and interactive elements to transform static content into immersive learning experiences.</li>
+                  <li>AI-Powered Features: Save time with tools like QR code detection and automatic link generation.</li>
+                  <li>Seamless Distribution: Easily share enriched e-books with schools and track engagement through analytics dashboards.</li>
+                </ul>
+              </div>
+              <!-- Image -->
+              <div class="md:w-1/2">
+                <img src="https://via.placeholder.com/400" alt="AI E-Books" class="w-full rounded-lg">
+              </div>
+            </div>
+  
+            <!-- Slide 2: AI Homework Module -->
+            <div class="swiper-slide flex flex-col md:flex-row items-center bg-white p-6 rounded-lg shadow-md gap-8">
+              <!-- Text Content -->
+              <div class="md:w-1/2 pl-8">
+                <h3 class="text-2xl font-semibold mb-4">AI Homework Module: Simplify Assignments and Tracking</h3>
+                <p class="text-gray-700 mb-4">
+                  Revolutionize homework processes with AI-driven efficiency and precision. Our module automates homework creation,
+                  tracks submissions, and provides automated grading, saving valuable time for educators and enhancing student learning.
+                </p>
+                <ul class="list-disc text-gray-700 list-outside pl-4">
+                  <li >Automated Homework Creation: Generate personalized assignments with AI, saving time for educators.</li>
+                  <li >Submission Tracking and Grading: Monitor homework completion rates and let AI handle grading accurately.</li>
+                  <li >Student Learning Analytics: Gain insights into student progress to ensure timely interventions and improved outcomes.</li>
+                </ul>
+              </div>
+              <!-- Image -->
+              <div class="md:w-1/2">
+                <img src="https://via.placeholder.com/400" alt="AI Homework" class="w-full rounded-lg">
+              </div>
+            </div>
+  
+            <!-- Slide 3: AI Quiz Module -->
+            <div class="swiper-slide flex flex-col md:flex-row items-center bg-white p-6 rounded-lg shadow-md gap-8">
+              <!-- Text Content -->
+              <div class="md:w-1/2 pl-8">
+                <h3 class="text-2xl font-semibold mb-4">AI Quiz Module: Redefine Assessments</h3>
+                <p class="text-gray-700 mb-4">
+                  Streamline assessments with smart, automated solutions that boost engagement and performance tracking. Our AI-powered
+                  quiz module auto-generates quizzes based on your content, providing real-time assessments with instant feedback for students.
+                </p>
+                <ul class="list-disc list-outside text-gray-700 pl-4">
+                  <li>Auto-Generated Quizzes: Let AI design quizzes based on your content, reducing manual effort.</li>
+                  <li>Interactive Assessments: Engage students with real-time quizzes that provide instant feedback.</li>
+                  <li>Learning Outcome Mapping: Every question is mapped to a Learning Outcome recommended under NEP 2022, ensuring alignment with modern education standards.</li>
+                  <li>Detailed Reporting: Generate quiz reports at various levels, including class, student, question, and learning outcome achievement levels.</li>
+                </ul>
+              </div>
+              <!-- Image -->
+              <div class="md:w-1/2">
+                <img src="https://via.placeholder.com/400" alt="AI Quiz" class="w-full rounded-lg">
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Swiper Navigation -->
+        <div class="swiper-button-prev absolute top-1/2 -left-8 transform -translate-y-1/2 text-gray-200 w-2 h-2"></div>
+        <div class="swiper-button-next absolute top-1/2 -right-8 transform -translate-y-1/2 text-gray-200 w-2 h-2"></div>
+  
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+    
+  
+  
+  <!-- quiz lab-->
+
+  <section id="quiz-lab" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Heading -->
+      <h2 class="text-3xl font-bold mb-8 text-center">
+        Revolutionizing Education in Government Schools: Quiz Lab
+      </h2>
+      
+      <!-- Introductory Paragraph -->
+      <p class="text-lg text-gray-700 mb-8 text-center">
+        Quiz Lab is an innovative educational solution tailored for government-run schools, designed to enhance student engagement, 
+        improve learning outcomes, and provide educators with tools for impactful teaching.
+      </p>
+      
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Left Image -->
+        <div class="md:w-1/2">
+          <img src="https://via.placeholder.com/500" alt="Quiz Lab" class="w-full rounded-lg shadow-md">
+        </div>
+  
+        <!-- Right Text Content -->
+        <div class="md:w-1/2">
+          <!-- Key Features -->
+          <h3 class="text-2xl font-semibold mb-4">Key Features</h3>
+          <ul class="list-disc list-outside text-gray-700 mb-6 pl-4">
+            <li>Curriculum-Aligned Quizzes: Topic-based and lesson-end quizzes mapped to specific learning outcomes.</li>
+            <li>Real-Time Engagement Tools: Live score dashboards for classrooms, teacher-controlled quiz timing, and practice worksheets.</li>
+            <li>Comprehensive Analytics: Achievement reports spanning students, classes, schools, and districts.</li>
+          </ul>
+  
+          <!-- Advanced Infrastructure -->
+          <h3 class="text-2xl font-semibold mb-4">Advanced Infrastructure</h3>
+          <ul class="list-disc list-outside text-gray-700 mb-6 pl-4">
+            <li>40 Android tablets with portable charging docks.</li>
+            <li>Individual student logins for secure, personalized access.</li>
+            <li>Outcome-Based Reporting: Detailed performance insights to track and improve learning outcomes.</li>
+            <li>Centralized Admin Control: Manage resources and reports efficiently.</li>
+          </ul>
+  
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- why-choose-quiz-lab -->
+  <section id="why-choose-quiz-lab" class="py-16 bg-violet-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-8 text-center">Why Choose Quiz Lab?</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+        <!-- Card 1: For Educators -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <div class="mb-4 text-blue-600">
+            <!-- Example Icon, you can replace this with any icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M12 2l7 5-7 5-7-5 7-5z"></path>
+                <path d="M5 12v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+              
+          </div>
+          <h4 class="text-xl font-semibold mb-4">For Educators</h4>
+          <p class="text-gray-700">
+            Tools that simplify lesson assessments and enhance student engagement.
+          </p>
+        </div>
+  
+        <!-- Card 2: For Administrators -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <div class="mb-4 text-blue-600">
+            <!-- Example Icon, you can replace this with any icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M12 2l7 5-7 5-7-5 7-5z"></path>
+                <path d="M5 12v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+              
+          </div>
+          <h4 class="text-xl font-semibold mb-4">For Administrators</h4>
+          <p class="text-gray-700">
+            Scalable and cost-effective solutions designed specifically for government schools.
+          </p>
+        </div>
+  
+        <!-- Card 3: For Students -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <div class="mb-4 text-blue-600">
+            <!-- Example Icon, you can replace this with any icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M12 2l7 5-7 5-7-5 7-5z"></path>
+                <path d="M5 12v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+              
+          </div>
+          <h4 class="text-xl font-semibold mb-4">For Students</h4>
+          <p class="text-gray-700">
+            Interactive learning that fosters measurable progress.
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Colored E-Book Device Section -->
+  <section id="ebook-device" class="py-16 bg-violet-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center">Colored E-Book Device: Empowering Digital Learning Everywhere</h2>
+      <p class="text-lg text-gray-700 mb-8 text-center">
+        Colored E-Book Devices are 9-inch Android tablets designed exclusively for educational use. They are locked to
+        a single application, ensuring students stay focused and undistracted while accessing interactive learning
+        content.
+      </p>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Left Text Content -->
+        <div class="md:w-1/2">
+    
+          <h3 class="text-2xl font-semibold mb-4">Key Benefits</h3>
+          <ul class="list-disc list-outside text-gray-700 mb-6 pl-4">
+            <li>Seamless Content Delivery: Provides schools with a secure way to deliver interactive content to students.</li>
+            <li>Bag-Free Convenience: Schools can retain printed books on campus while students take E-Book Devices home for daily learning.</li>
+            <li>Extended Learning: Enables students to continue their education at home, without the burden of heavy bags and printed materials.</li>
+            <li>Distraction-Free Environment: Locked to one application, E-Book Devices ensure a dedicated focus on learning.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-4">Why Choose Colored E-Book Device?</h3>
+          <ul class="list-disc list-outside text-gray-700 mb-6 pl-4">
+            <li>Enhance classroom learning with technology designed specifically for students.</li>
+            <li>Support schools in transitioning to a more modern, bag-free education model.</li>
+            <li>Combine digital convenience with robust security and focus.</li>
+          </ul>
+        </div>
+  
+        <!-- Right Image -->
+        <div class="md:w-1/2">
+          <img src="https://via.placeholder.com/500" alt="Colored E-Book Device" class="w-full rounded-lg shadow-md">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- why-us -->
+ <section id="why-us" class="py-16 bg-violet-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12 text-center">Why Buk Buddy, Quiz Lab, and Colored E-Book Device?</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card 1: White-Labeled Solutions -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner bg-white rounded-lg shadow-lg h-full">
+          <!-- Front Side with Icon -->
+          <div class="flip-card-front bg-white p-6 flex flex-col items-center justify-center h-full">
+            <div class="mb-4 text-blue-600">
+              <!-- Example Icon (can be replaced with any icon you prefer) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M12 2l7 5-7 5-7-5 7-5z"></path>
+                <path d="M5 12v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800">White-Labeled Solutions</h3>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-back bg-blue-100 p-6 flex items-center justify-center h-full">
+            <p class="text-gray-700">
+              Fully customizable platforms branded for publishers, allowing them to maintain their unique identity while delivering digital learning solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: End-to-End Tech Support -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner bg-white rounded-lg shadow-lg h-full">
+          <!-- Front Side with Icon -->
+          <div class="flip-card-front bg-white p-6 flex flex-col items-center justify-center h-full">
+            <div class="mb-4 text-blue-600">
+              <!-- Example Icon (can be replaced with any icon you prefer) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M12 2l7 5-7 5-7-5 7-5z"></path>
+                <path d="M5 12v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800">End-to-End Tech Support</h3>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-back bg-blue-100 p-6 flex items-center justify-center h-full">
+            <p class="text-gray-700">
+              From setup to implementation, we provide comprehensive technical assistance to ensure seamless operation and adoption.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Data-Driven Insights -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner bg-white rounded-lg shadow-lg h-full">
+          <!-- Front Side with Icon -->
+          <div class="flip-card-front bg-white p-6 flex flex-col items-center justify-center h-full">
+            <div class="mb-4 text-blue-600">
+              <!-- Example Icon (can be replaced with any icon you prefer) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M12 2l7 5-7 5-7-5 7-5z"></path>
+                <path d="M5 12v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800">Data-Driven Insights</h3>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-back bg-blue-100 p-6 flex items-center justify-center h-full">
+            <p class="text-gray-700">
+              Leverage analytics to track engagement and improve offerings, providing actionable insights for continuous growth and optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Cost-Effective and Scalable -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner bg-white rounded-lg shadow-lg h-full">
+          <!-- Front Side with Icon -->
+          <div class="flip-card-front bg-white p-6 flex flex-col items-center justify-center h-full">
+            <div class="mb-4 text-blue-600">
+              <!-- Example Icon (can be replaced with any icon you prefer) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M12 2l7 5-7 5-7-5 7-5z"></path>
+                <path d="M5 12v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800">Cost-Effective and Scalable</h3>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-back bg-blue-100 p-6 flex items-center justify-center h-full">
+            <p class="text-gray-700">
+              Designed to meet diverse needs, our solutions are scalable and provide exceptional value without compromising on quality.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Get Started Section -->
+<section id="get-started" class="py-16 bg-violet-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Get Started with Buk Buddy and Quiz Lab</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Join the digital education revolution. With Buk Buddy’s publishing solutions, Quiz Lab’s school-focused tools, and
+        Colored E-Book Device, you can shape the future of K-12 learning with measurable impact and ease.
+      </p>
+      <a href="#contact" class="bg-fuchsia-900 text-white py-3 px-6 rounded-full text-lg hover:bg-purple-700">
+        Get Started
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-fuchsia-900 text-white py-4">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p>&copy; 2024 Buk Buddy. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true, // Infinite loop
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1, // One slide at a time
+      spaceBetween: 20, // Spacing between slides
+    });
+
+    document.querySelectorAll('.flip-card').forEach((card) => {
+    card.addEventListener('click', () => {
+      card.querySelector('.flip-card-inner').classList.toggle('rotate-y-180');
+    });
+  });
+  </script>
+  
+  
+  
+</body>
+
+</html>
